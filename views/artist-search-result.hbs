@@ -1,0 +1,13 @@
+<div>
+  {{#each resultslist}}
+    <div>
+      <h1>
+        {{this.name}}
+      </h1>
+      {{!-- {{#each this.images}} --}}
+      <img src="{{this.images.1.url}}" alt="" />
+      <button><a href="/albums/{{this.id}}">View Albums</a></button>
+      {{!-- {{/each}} --}}
+    </div>
+  {{/each}}
+</div>
