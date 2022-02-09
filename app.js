@@ -52,7 +52,7 @@ app.get("/albums/:artistId", (req, res, next) => {
   });
 });
 
-app.get("/tracks/:trackId", (req, res) => {
+app.get("/tracks/:trackId", (req, res, next) => {
   const trackId = req.params.trackId;
   spotifyApi.getAlbumTracks(trackId).then((tracksFromApi) => {
     res.render("tracks", { tracks: tracksFromApi.body.items });
